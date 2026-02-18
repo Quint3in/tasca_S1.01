@@ -33,6 +33,14 @@ atributs, també diferència entre mètodes estàtics i no estàtics.
 
 ### 📌 Has de crear una classe que representi un cotxe amb algunes particularitats que et permetran entendre com funciona la memòria i la inicialització en Java.
 
+## 🧩 Preguntes
+Quin d’aquests atributs pot ser inicialitzat des del constructor?
+***Només power.***
+Quin no es pot modificar mai?
+***brand.***
+Quin afecta totes les instàncies de la classe?
+***model.***
+
 ## 🛠 Tecnologies
 - Backend: Java
 
