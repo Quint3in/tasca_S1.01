@@ -5,8 +5,16 @@ public class F1Article extends Article {
     private String constructorTeam;
 
 
-    public F1Article(String headline, int score, double price) {
-        super(headline, score, price);
+    public F1Article(String headline) {
+        super(headline);
+    }
+
+    public String getConstructorTeam() {
+        return constructorTeam;
+    }
+
+    public void setConstructorTeam(String constructorTeam) {
+        this.constructorTeam = constructorTeam;
     }
 
     @Override
@@ -14,7 +22,7 @@ public class F1Article extends Article {
         double finalPrice = BASE_PRICE;
 
         if(constructorTeam.equalsIgnoreCase("Ferrari") ||
-           constructorTeam.equalsIgnoreCase("Mercedes") ){
+                constructorTeam.equalsIgnoreCase("Mercedes") ){
             finalPrice+=50;
         }
         return finalPrice;

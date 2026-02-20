@@ -5,8 +5,24 @@ public class BasketballArticle extends Article{
     private String tournament;
     private String club;
 
-    public BasketballArticle(String headline, int score, double price) {
-        super(headline, score, price);
+    public BasketballArticle(String headline) {
+        super(headline);
+    }
+
+    public String getTournament() {
+        return tournament;
+    }
+
+    public void setTournament(String tournament) {
+        this.tournament = tournament;
+    }
+
+    public String getClub() {
+        return club;
+    }
+
+    public void setClub(String club) {
+        this.club = club;
     }
 
     @Override
@@ -14,7 +30,7 @@ public class BasketballArticle extends Article{
         double finalPrice = BASE_PRICE;
 
         if (tournament.equalsIgnoreCase("EuroLliga")) {finalPrice+=75;}
-        if (text.contains("Barça") || text.contains("Madrid")) {finalPrice+=75;}
+        if (club.equalsIgnoreCase("Barça") || club.equalsIgnoreCase("Madrid")) {finalPrice+=75;}
 
         return finalPrice;
     }
@@ -25,7 +41,7 @@ public class BasketballArticle extends Article{
 
         if (tournament.equalsIgnoreCase("EuroLliga")) {finalScore+=3;}
         if (tournament.equalsIgnoreCase("ACB")) {finalScore+=2;}
-        if (text.contains("Barça") || text.contains("Madrid")) {finalScore+=1;}
+        if (club.equalsIgnoreCase("Barça") || club.equalsIgnoreCase("Madrid")) {finalScore+=1;}
 
         return finalScore;
     }

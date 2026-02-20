@@ -1,11 +1,19 @@
-public class MotorcylingArticle extends Article{
+public class MotorcyclingArticle extends Article{
     final double BASE_PRICE = 100;
     final int BASE_SCORE = 3;
 
     private String team;
 
-    public MotorcylingArticle(String headline, int score, double price) {
-        super(headline, score, price);
+    public MotorcyclingArticle(String headline) {
+        super(headline);
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
     }
 
     @Override

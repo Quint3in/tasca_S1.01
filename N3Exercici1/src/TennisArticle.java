@@ -6,11 +6,24 @@ public class TennisArticle extends Article{
     final int BASE_SCORE =4;
 
     private String tournament;
-    private List<String> players = new ArrayList<String>();
+    private List<String> players = new ArrayList<>();
 
 
-    public TennisArticle(String headline, int score, double price) {
-        super(headline, score, price);
+    public TennisArticle(String headline) {
+        super(headline);
+    }
+
+
+    public void addPlayer (String player) {
+        players.add(player);
+    }
+
+    public String getTournament() {
+        return tournament;
+    }
+
+    public void setTournament(String tournament) {
+        this.tournament = tournament;
     }
 
     @Override
